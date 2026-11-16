@@ -1,10 +1,26 @@
 :root {
-  --background-color: #f4f6f8;
-  --text-color: #222222;
-  --accent-color: #174a7e;
-  --main-font: Arial, Helvetica, sans-serif;
-  --content-width: 960px;
+    --background-color: #f4f6f8;
+    --text-color: #222222;
+    --accent-color: #174a7e;
+    --main-font: Arial, Helvetica, sans-serif;
+    --content-width: 960px;
+
+    --control-background: #ffffff;
+    --control-text: #222222;
+    --control-border: #666666;
 }
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+    --background-color: #161b22;
+    --text-color: #e6edf3;
+    --accent-color: #83baf2;
+
+    --control-background: #252d38;
+    --control-text: #e6edf3;
+    --control-border: #a0aab8;
+}
+
 
 * {
   box-sizing: border-box;
@@ -275,4 +291,57 @@ form button {
     background-color: #fff2d5;
     padding: 0.5rem;
     border-left: 4px solid #c26800;
+}
+
+/* Theme Colors for Form Controls */
+input,
+textarea {
+    background-color: var(--control-background);
+    color: var(--control-text);
+    border-color: var(--control-border);
+}
+
+
+/* Theme Toggle Button */
+
+#theme-toggle {
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+}
+
+/* Dark theme button contrast */
+:root[data-theme="dark"] button {
+    color: #161b22;
+}
+
+:root[data-theme="dark"] button:hover {
+    background-color: #b8d9fa;
+    color: #161b22;
+}
+
+/* Dark theme validation colors */
+:root[data-theme="dark"] .form-group :user-invalid {
+    background-color: #42252a;
+    color: #e6edf3;
+    border-color: #ff8989;
+}
+
+:root[data-theme="dark"] .form-group :user-valid {
+    background-color: #203b2d;
+    color: #e6edf3;
+    border-color: #85d0a0;
+}
+
+:root[data-theme="dark"] .field-error {
+    color: #ffb4a8;
+}
+
+:root[data-theme="dark"] #form-error-summary {
+    background-color: #42252a;
+    color: #ffe1dc;
+    border-color: #ff8989;
+}
+
+:root[data-theme="dark"] #form-error-summary h3 {
+    color: #ffe1dc;
 }
