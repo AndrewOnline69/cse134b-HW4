@@ -212,3 +212,33 @@ form button {
     font: inherit;
     cursor: pointer;
 }
+
+
+/* Form Validation */
+
+/* Indicate required fields */
+.form-group input:required,
+.form-group textarea:required {
+    border-width: 2px;
+}
+
+/* Invalid fields after user interaction */
+.form-group input:user-invalid,
+.form-group textarea:user-invalid {
+    border-color: #c62828;
+    background-color: #fff0f0;
+}
+
+/* Valid fields after user interaction */
+.form-group input:user-valid,
+.form-group textarea:user-valid {
+    border-color: #2e7d32;
+    background-color: #f0fff0;
+}
+
+/* Keep keyboard focus visible */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
