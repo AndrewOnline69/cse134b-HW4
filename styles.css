@@ -242,3 +242,37 @@ form button {
     outline: 3px solid #2563eb;
     outline-offset: 2px;
 }
+
+
+/* JavaScript Form Validation */
+
+.field-error {
+    color: #b42318;
+    font-weight: bold;
+}
+
+#form-error-summary {
+    border: 2px solid #b42318;
+    background-color: #fff0f0;
+    color: #822018;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#form-error-summary h3 {
+    color: #822018;
+}
+
+/* Character Counter */
+
+#comments-info {
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+#comments-info.length-warning {
+    color: #8a3600;
+    background-color: #fff2d5;
+    padding: 0.5rem;
+    border-left: 4px solid #c26800;
+}
